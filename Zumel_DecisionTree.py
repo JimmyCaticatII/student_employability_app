@@ -24,17 +24,21 @@ clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
 
 # print the classification report
-print(classification_report(y_test, y_pred))
+print('Classification Report:\n', classification_report(y_test, y_pred))
 
 # get input values for new student from user
-new_student = [5,5,5,5,5,5,5,5]
+# new_student = [5, 5, 5, 5, 5, 5, 5, 5]
 
-# new_student = []
-# # define column names for new student data
-# columns = ['GENERAL APPEARANCE', 'MANNER OF SPEAKING', 'PHYSICAL CONDITION', 'MENTAL ALERTNESS', 'SELF-CONFIDENCE', 'ABILITY TO PRESENT IDEAS', 'COMMUNICATION SKILLS', 'Student Performance Rating']
-# for col in columns:
-#     value = int(input(f"Enter {col}: "))
-#     new_student.append(value)
+new_student = []
+# define column names for new student data
+columns = ['GENERAL APPEARANCE', 'MANNER OF SPEAKING',
+           'PHYSICAL CONDITION', 'MENTAL ALERTNESS', 'SELF-CONFIDENCE', 'ABILITY TO PRESENT IDEAS',
+           'COMMUNICATION SKILLS',
+           'Student Performance Rating']
+
+for col in columns:
+    value = int(input(f"Enter {col}: "))
+    new_student.append(value)
 
 # make a prediction for the new student using the trained classifier
 prediction = clf.predict([new_student])
@@ -43,5 +47,5 @@ prediction = clf.predict([new_student])
 print(f"Prediction: {prediction[0]}")
 
 # save the trained model using pickle
-# with open('student_employability.pkl', 'wb') as f:
-#     pickle.dump(clf, f)
+with open('student_employability.pkl', 'wb') as f:
+    pickle.dump(clf, f)

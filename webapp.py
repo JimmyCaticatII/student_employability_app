@@ -6,7 +6,10 @@ import pickle
 app = Flask(__name__)
 
 # Load the trained model from the .pkl file
-model = pickle.load(open("student_employability.pkl", "rb"))
+with open("student_employability.pkl", "rb") as f:
+    model = pickle.load(f)
+# model = pickle.load(open("student_employability.pkl", "rb"))
+
 
 # Create a route for the homepage
 @app.route("/", methods=["GET", "POST"])
@@ -31,6 +34,7 @@ def home():
 
     # Render the index.html template and pass the prediction and form data as arguments
     return render_template("index.html", prediction=prediction, form_data=form_data)
+
 
 # Run the app only when this script is executed directly (not when imported)
 if __name__ == "__main__":
