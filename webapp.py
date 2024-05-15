@@ -8,7 +8,6 @@ app = Flask(__name__)
 # Load the trained model from the .pkl file
 with open("student_employability.pkl", "rb") as f:
     model = pickle.load(f)
-# model = pickle.load(open("student_employability.pkl", "rb"))
 
 
 # Create a route for the homepage

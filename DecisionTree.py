@@ -31,10 +31,12 @@ print('Classification Report:\n', classification_report(y_test, y_pred))
 
 new_student = []
 # define column names for new student data
-columns = ['GENERAL APPEARANCE', 'MANNER OF SPEAKING',
-           'PHYSICAL CONDITION', 'MENTAL ALERTNESS', 'SELF-CONFIDENCE', 'ABILITY TO PRESENT IDEAS',
-           'COMMUNICATION SKILLS',
-           'Student Performance Rating']
+columns = [
+    'GENERAL APPEARANCE', 'MANNER OF SPEAKING',
+    'PHYSICAL CONDITION', 'MENTAL ALERTNESS',
+    'SELF-CONFIDENCE', 'ABILITY TO PRESENT IDEAS',
+    'COMMUNICATION SKILLS', 'Student Performance Rating'
+]
 
 for col in columns:
     value = int(input(f"Enter {col}: "))

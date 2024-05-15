@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Zumel_StudentEmployability.iml" filepath="$PROJECT_DIR$/.idea/Zumel_StudentEmployability.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/StudentEmployabilityApplication.iml" filepath="$PROJECT_DIR$/.idea/StudentEmployabilityApplication.iml" />
     </modules>
   </component>
 </project>
